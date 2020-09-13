@@ -23,7 +23,7 @@ io.on('connection', (socket) => {
     })
 
     socket.on('sendLocation', (coords) => {
-        io.emit('message', `Location: ${coords.latitude}, ${coords.longitude}`)
+        io.emit('message', `Location: https://www.google.com/maps?q=${coords.latitude},${coords.longitude}`)
     })
 
     socket.on('disconnect', () => io.emit('message', 'A user has left'))
